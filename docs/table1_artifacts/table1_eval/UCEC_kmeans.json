@@ -1,0 +1,9 @@
+{
+  "cancer": "UCEC",
+  "method": "kmeans",
+  "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\UCEC.kmeans.tsv",
+  "n_samples_eval": 510,
+  "neg_log10_logrank_p": 5.088414102153721,
+  "n_significant_clinical": 1,
+  "status": "ok"
+}

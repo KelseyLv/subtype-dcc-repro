@@ -1,0 +1,9 @@
+{
+  "cancer": "BLCA",
+  "method": "subtype_dcc",
+  "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\vendor\\Subtype-DCC\\Subtype-DCC\\results\\BLCA.dcc",
+  "n_samples_eval": 399,
+  "neg_log10_logrank_p": 1.9405485029353897,
+  "n_significant_clinical": 5,
+  "status": "ok"
+}

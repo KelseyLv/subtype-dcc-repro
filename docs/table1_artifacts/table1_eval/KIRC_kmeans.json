@@ -1,0 +1,9 @@
+{
+  "cancer": "KIRC",
+  "method": "kmeans",
+  "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\KIRC.kmeans.tsv",
+  "n_samples_eval": 488,
+  "neg_log10_logrank_p": 8.064365314999089,
+  "n_significant_clinical": 6,
+  "status": "ok"
+}

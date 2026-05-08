@@ -1,0 +1,9 @@
+{
+  "cancer": "SKCM",
+  "method": "spectral",
+  "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\SKCM.spectral.tsv",
+  "n_samples_eval": 420,
+  "neg_log10_logrank_p": 0.24060188446321096,
+  "n_significant_clinical": 1,
+  "status": "ok"
+}

@@ -1,0 +1,9 @@
+{
+  "cancer": "SKCM",
+  "method": "subtype_dcc",
+  "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\vendor\\Subtype-DCC\\Subtype-DCC\\results\\SKCM.dcc",
+  "n_samples_eval": 420,
+  "neg_log10_logrank_p": 2.5340080997835144,
+  "n_significant_clinical": 4,
+  "status": "ok"
+}

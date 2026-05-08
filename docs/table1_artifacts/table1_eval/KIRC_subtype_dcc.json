@@ -1,0 +1,9 @@
+{
+  "cancer": "KIRC",
+  "method": "subtype_dcc",
+  "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\vendor\\Subtype-DCC\\Subtype-DCC\\results\\KIRC.dcc",
+  "n_samples_eval": 488,
+  "neg_log10_logrank_p": 6.240860941542036,
+  "n_significant_clinical": 6,
+  "status": "ok"
+}

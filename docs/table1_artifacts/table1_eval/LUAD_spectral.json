@@ -1,0 +1,9 @@
+{
+  "cancer": "LUAD",
+  "method": "spectral",
+  "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\LUAD.spectral.tsv",
+  "n_samples_eval": 490,
+  "neg_log10_logrank_p": 21.410744988879564,
+  "n_significant_clinical": 2,
+  "status": "ok"
+}

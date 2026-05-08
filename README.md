@@ -91,6 +91,22 @@ python repro/evaluate.py --labels vendor/Subtype-DCC/Subtype-DCC/results/BRCA.dc
 
 Outputs: `repro_out/table1_reproduction_metrics.json`, `repro_out/table1_reproduction_vs_paper.{json,md}`, per-method slims under `repro_out/table1_eval/`.
 
+### Git-friendly snapshot (`docs/table1_artifacts/`)
+
+`repro_out/` is **gitignored**. After you finish the five methods × nine cancers pipeline (batch evaluate, `table1_compare_to_paper.py`, and optional Figure 1 plots), copy **only small, reviewable artifacts** into the repo with:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\sync_table1_artifacts_to_docs.ps1
+```
+
+That script fills **`docs/table1_artifacts/`** with: `table1_reproduction_metrics.json`, `table1_reproduction_vs_paper.{json,md}`, `table1_eval/*.json`, `figure1_*.png`, **`label_tsv/`** (nine cohorts × SNF + kmeans + spectral + nmf), and **`batch_metrics_summary.json`** (Subtype-DCC `.dcc` batch from `batch_evaluate.py`). **Training checkpoints (`save/`), `vendor/.../results/*.dcc`, `*.fea`, Xena `.gz`, full clinical TSV, and large manuscript cache trees are not copied** — others still train or place `.dcc` locally, then re-run `batch_evaluate_table1_methods.py` if they need to refresh numbers.
+
+Regenerate Figure 1 from the committed summary JSON:
+
+```bash
+.venv/Scripts/python.exe repro/plot_figure1_table1_boxplots.py --metrics-json docs/table1_artifacts/table1_reproduction_metrics.json --out-dir docs/table1_artifacts
+```
+
 ## 5. Sklearn baselines (K-means, spectral, NMF)
 
 Uses the **same MinMax-scaled concatenated matrix** as Subtype-DCC (`repro/data_io.py`).
