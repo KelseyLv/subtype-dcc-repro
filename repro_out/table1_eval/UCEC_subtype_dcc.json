@@ -1,0 +1,9 @@
+{
+  "cancer": "UCEC",
+  "method": "subtype_dcc",
+  "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\vendor\\Subtype-DCC\\Subtype-DCC\\results\\UCEC.dcc",
+  "n_samples_eval": 510,
+  "neg_log10_logrank_p": 4.685584073148334,
+  "n_significant_clinical": 1,
+  "status": "ok"
+}

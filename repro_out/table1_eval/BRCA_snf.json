@@ -1,0 +1,9 @@
+{
+  "cancer": "BRCA",
+  "method": "snf",
+  "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\BRCA.snf.tsv",
+  "n_samples_eval": 1031,
+  "neg_log10_logrank_p": 2.249457465152865,
+  "n_significant_clinical": 6,
+  "status": "ok"
+}

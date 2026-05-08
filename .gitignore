@@ -10,7 +10,6 @@ external/
 results/
 logs/
 *.dcc.tmp
-repro_out/
 figures/
 vendor/Subtype-DCC/Subtype-DCC/log/
 vendor/Subtype-DCC/Subtype-DCC/save/
@@ -20,6 +19,5 @@ vendor/Subtype-DCC/Subtype-DCC/save/
 vendor/Subtype-DCC/subtype_file/fea/**/*.fea
 vendor/Subtype-DCC/subtype_file/fea/**/*.gz
 
-# Full cBioPortal clinical extract (obtain separately; not versioned)
-data/clinical/*.tsv
+# Clinical TSV is tracked in-repo for team sharing (cBioportal extract).
 data_setup_transcript.log

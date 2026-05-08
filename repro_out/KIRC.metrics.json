@@ -1,0 +1,15 @@
+{
+  "cancer": "KIRC",
+  "n_samples_eval": 488,
+  "neg_log10_logrank_p": 6.240860941542036,
+  "n_significant_clinical": 6,
+  "clinical_pvals": {
+    "age_at_initial_pathologic_diagnosis": 9.702085039592552e-08,
+    "gender": 0.0036973261788006335,
+    "pathologic_stage": 6.338712735584978e-09,
+    "pathologic_T": 1.849861915745531e-05,
+    "pathologic_N": 0.008225113918993455,
+    "pathologic_M": 4.1762678437229374e-07
+  },
+  "status": "ok"
+}

@@ -1,0 +1,54 @@
+{
+  "clinical_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\data\\clinical\\cBioportal_data.tsv",
+  "labels_dir": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\vendor\\Subtype-DCC\\Subtype-DCC\\results",
+  "results": {
+    "BRCA": {
+      "status": "ok",
+      "metrics_json": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\BRCA.metrics.json",
+      "n_samples_eval": 1031,
+      "neg_log10_logrank_p": 1.4727425940133676,
+      "n_significant_clinical": 5
+    },
+    "BLCA": {
+      "status": "ok",
+      "metrics_json": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\BLCA.metrics.json",
+      "n_samples_eval": 399,
+      "neg_log10_logrank_p": 1.9405485029353897,
+      "n_significant_clinical": 5
+    },
+    "KIRC": {
+      "status": "ok",
+      "metrics_json": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\KIRC.metrics.json",
+      "n_samples_eval": 488,
+      "neg_log10_logrank_p": 6.240860941542036,
+      "n_significant_clinical": 6
+    },
+    "LUAD": {
+      "status": "ok",
+      "metrics_json": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\LUAD.metrics.json",
+      "n_samples_eval": 490,
+      "neg_log10_logrank_p": 3.5141859700584033,
+      "n_significant_clinical": 5
+    },
+    "PAAD": {
+      "status": "missing_dcc",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\vendor\\Subtype-DCC\\Subtype-DCC\\results\\PAAD.dcc"
+    },
+    "SKCM": {
+      "status": "missing_dcc",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\vendor\\Subtype-DCC\\Subtype-DCC\\results\\SKCM.dcc"
+    },
+    "STAD": {
+      "status": "missing_dcc",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\vendor\\Subtype-DCC\\Subtype-DCC\\results\\STAD.dcc"
+    },
+    "UCEC": {
+      "status": "missing_dcc",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\vendor\\Subtype-DCC\\Subtype-DCC\\results\\UCEC.dcc"
+    },
+    "UVM": {
+      "status": "missing_dcc",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\vendor\\Subtype-DCC\\Subtype-DCC\\results\\UVM.dcc"
+    }
+  }
+}

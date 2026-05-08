@@ -1,0 +1,771 @@
+{
+  "clinical_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\data\\clinical\\cBioportal_data.tsv",
+  "n_rows": 45,
+  "rows": [
+    {
+      "cancer": "BRCA",
+      "method": "subtype_dcc",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\vendor\\Subtype-DCC\\Subtype-DCC\\results\\BRCA.dcc",
+      "n_samples_eval": 1031,
+      "neg_log10_logrank_p": 1.4727425940133676,
+      "n_significant_clinical": 5,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 3.3030872285306384e-07,
+        "gender": 0.00010909919364674073,
+        "pathologic_stage": 4.276360917437874e-06,
+        "pathologic_T": 0.0003879193174722489,
+        "pathologic_N": 7.875153361225242e-06,
+        "pathologic_M": 0.06681255411177242
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "BRCA",
+      "method": "snf",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\BRCA.snf.tsv",
+      "n_samples_eval": 1031,
+      "neg_log10_logrank_p": 2.249457465152865,
+      "n_significant_clinical": 6,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 1.0426639406140818e-06,
+        "gender": 0.01071041318018303,
+        "pathologic_stage": 0.0013071762149957265,
+        "pathologic_T": 0.00021002204341489787,
+        "pathologic_N": 0.00013912957505558587,
+        "pathologic_M": 1.1380001377321444e-05
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "BRCA",
+      "method": "kmeans",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\BRCA.kmeans.tsv",
+      "n_samples_eval": 1031,
+      "neg_log10_logrank_p": 1.3536873580503221,
+      "n_significant_clinical": 5,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 1.2075536298316827e-10,
+        "gender": 0.00013838684534722177,
+        "pathologic_stage": 1.5164619590802429e-05,
+        "pathologic_T": 6.945188390916195e-05,
+        "pathologic_N": 0.0006622860328862125,
+        "pathologic_M": 0.30601122630183486
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "BRCA",
+      "method": "spectral",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\BRCA.spectral.tsv",
+      "n_samples_eval": 1031,
+      "neg_log10_logrank_p": 6.116706531991324,
+      "n_significant_clinical": 0,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 0.7845152656314826,
+        "gender": 0.9995709263423002,
+        "pathologic_stage": 0.32347211564804584,
+        "pathologic_T": 0.2970900725203603,
+        "pathologic_N": 0.9999999999983199,
+        "pathologic_M": 0.44309380111361496
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "BRCA",
+      "method": "nmf",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\BRCA.nmf.tsv",
+      "n_samples_eval": 1031,
+      "neg_log10_logrank_p": 1.8090763840202218,
+      "n_significant_clinical": 5,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 2.5159066189849105e-07,
+        "gender": 0.008255818880690028,
+        "pathologic_stage": 7.038829390381867e-05,
+        "pathologic_T": 8.52402544809982e-05,
+        "pathologic_N": 0.0002080401995322197,
+        "pathologic_M": 0.07960162105703063
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "BLCA",
+      "method": "subtype_dcc",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\vendor\\Subtype-DCC\\Subtype-DCC\\results\\BLCA.dcc",
+      "n_samples_eval": 399,
+      "neg_log10_logrank_p": 1.9405485029353897,
+      "n_significant_clinical": 5,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 3.251399427595603e-05,
+        "gender": 0.17199485881274534,
+        "pathologic_stage": 9.025751696431043e-08,
+        "pathologic_T": 1.2755051759916818e-05,
+        "pathologic_N": 2.2605838217592673e-06,
+        "pathologic_M": 7.430979874867011e-08
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "BLCA",
+      "method": "snf",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\BLCA.snf.tsv",
+      "n_samples_eval": 399,
+      "neg_log10_logrank_p": 0.6385127951556023,
+      "n_significant_clinical": 5,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 3.58254331682343e-05,
+        "gender": 0.19942308355438407,
+        "pathologic_stage": 2.472578776070576e-06,
+        "pathologic_T": 0.0001443835323286601,
+        "pathologic_N": 8.107474461882174e-06,
+        "pathologic_M": 3.1379323378421646e-06
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "BLCA",
+      "method": "kmeans",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\BLCA.kmeans.tsv",
+      "n_samples_eval": 399,
+      "neg_log10_logrank_p": 1.165953429852376,
+      "n_significant_clinical": 6,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 1.9014736745312562e-05,
+        "gender": 0.044276573859746565,
+        "pathologic_stage": 1.873569595688282e-05,
+        "pathologic_T": 0.00011219665883065433,
+        "pathologic_N": 0.007062260660471811,
+        "pathologic_M": 2.5814090182683908e-08
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "BLCA",
+      "method": "spectral",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\BLCA.spectral.tsv",
+      "n_samples_eval": 399,
+      "neg_log10_logrank_p": 0.7550218598327937,
+      "n_significant_clinical": 1,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 0.4144528107775721,
+        "gender": 0.3188395606531796,
+        "pathologic_stage": 0.7369137534190504,
+        "pathologic_T": 0.9953313429933216,
+        "pathologic_N": 0.6911042911508606,
+        "pathologic_M": 1.4832557827610762e-06
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "BLCA",
+      "method": "nmf",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\BLCA.nmf.tsv",
+      "n_samples_eval": 399,
+      "neg_log10_logrank_p": 1.6830718561088416,
+      "n_significant_clinical": 4,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 0.3584642848280596,
+        "gender": 0.17737887155094076,
+        "pathologic_stage": 0.04717120859673508,
+        "pathologic_T": 0.015321678027115749,
+        "pathologic_N": 0.0026334384181027353,
+        "pathologic_M": 5.649569464227668e-06
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "KIRC",
+      "method": "subtype_dcc",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\vendor\\Subtype-DCC\\Subtype-DCC\\results\\KIRC.dcc",
+      "n_samples_eval": 488,
+      "neg_log10_logrank_p": 6.240860941542036,
+      "n_significant_clinical": 6,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 9.702085039592552e-08,
+        "gender": 0.0036973261788006335,
+        "pathologic_stage": 6.338712735584978e-09,
+        "pathologic_T": 1.849861915745531e-05,
+        "pathologic_N": 0.008225113918993455,
+        "pathologic_M": 4.1762678437229374e-07
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "KIRC",
+      "method": "snf",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\KIRC.snf.tsv",
+      "n_samples_eval": 488,
+      "neg_log10_logrank_p": 9.703142741701726,
+      "n_significant_clinical": 6,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 0.0203717042172914,
+        "gender": 0.003424366390175116,
+        "pathologic_stage": 7.780411625508399e-15,
+        "pathologic_T": 1.5707081632196108e-13,
+        "pathologic_N": 7.431764427585523e-05,
+        "pathologic_M": 1.297144973261419e-13
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "KIRC",
+      "method": "kmeans",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\KIRC.kmeans.tsv",
+      "n_samples_eval": 488,
+      "neg_log10_logrank_p": 8.064365314999089,
+      "n_significant_clinical": 6,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 0.0008689721349320743,
+        "gender": 0.01161015870370423,
+        "pathologic_stage": 1.539403567704447e-11,
+        "pathologic_T": 6.527608425407972e-10,
+        "pathologic_N": 0.00354882538831174,
+        "pathologic_M": 3.6268384444885198e-09
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "KIRC",
+      "method": "spectral",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\KIRC.spectral.tsv",
+      "n_samples_eval": 488,
+      "neg_log10_logrank_p": 0.9712855882420334,
+      "n_significant_clinical": 0,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 0.7709405900217428,
+        "gender": 1.0,
+        "pathologic_stage": 0.38560763630301276,
+        "pathologic_T": 0.9778810708444038,
+        "pathologic_N": 0.5265013053696925,
+        "pathologic_M": 0.8695658117897795
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "KIRC",
+      "method": "nmf",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\KIRC.nmf.tsv",
+      "n_samples_eval": 488,
+      "neg_log10_logrank_p": 7.884727035747128,
+      "n_significant_clinical": 6,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 2.6226863477529746e-06,
+        "gender": 0.0035174979079781363,
+        "pathologic_stage": 1.6467048158095966e-08,
+        "pathologic_T": 1.1193125863023887e-05,
+        "pathologic_N": 0.001457340948349278,
+        "pathologic_M": 3.814368164723948e-07
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "LUAD",
+      "method": "subtype_dcc",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\vendor\\Subtype-DCC\\Subtype-DCC\\results\\LUAD.dcc",
+      "n_samples_eval": 490,
+      "neg_log10_logrank_p": 3.5141859700584033,
+      "n_significant_clinical": 5,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 0.009244768186572454,
+        "gender": 0.00012059672481751799,
+        "pathologic_stage": 0.0012663618802755004,
+        "pathologic_T": 0.00016732364413186813,
+        "pathologic_N": 0.01000220792616501,
+        "pathologic_M": 0.26521873346975366
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "LUAD",
+      "method": "snf",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\LUAD.snf.tsv",
+      "n_samples_eval": 490,
+      "neg_log10_logrank_p": 2.3009132866553164,
+      "n_significant_clinical": 3,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 0.003385900916946411,
+        "gender": 0.00013089139254507224,
+        "pathologic_stage": 0.5825247319963532,
+        "pathologic_T": 0.0212536409250466,
+        "pathologic_N": 0.0944288494215837,
+        "pathologic_M": 0.5636817466524418
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "LUAD",
+      "method": "kmeans",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\LUAD.kmeans.tsv",
+      "n_samples_eval": 490,
+      "neg_log10_logrank_p": 1.4564621467593777,
+      "n_significant_clinical": 5,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 0.035182184588892454,
+        "gender": 2.109540415685925e-06,
+        "pathologic_stage": 0.00017573137479729199,
+        "pathologic_T": 3.0576873178138e-06,
+        "pathologic_N": 0.16730570338308576,
+        "pathologic_M": 0.03845214474130613
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "LUAD",
+      "method": "spectral",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\LUAD.spectral.tsv",
+      "n_samples_eval": 490,
+      "neg_log10_logrank_p": 21.410744988879564,
+      "n_significant_clinical": 2,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 0.7802624867683383,
+        "gender": 0.36432981551859395,
+        "pathologic_stage": 0.06546563244894296,
+        "pathologic_T": 0.041912623490743046,
+        "pathologic_N": 0.997459045828107,
+        "pathologic_M": 0.00021272677999064707
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "LUAD",
+      "method": "nmf",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\LUAD.nmf.tsv",
+      "n_samples_eval": 490,
+      "neg_log10_logrank_p": 2.604861795185174,
+      "n_significant_clinical": 3,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 0.13003422469677325,
+        "gender": 1.2756127058059232e-05,
+        "pathologic_stage": 0.0037139860599384638,
+        "pathologic_T": 5.5156385480899166e-05,
+        "pathologic_N": 0.2151283133941575,
+        "pathologic_M": 0.05840385085194534
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "PAAD",
+      "method": "subtype_dcc",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\vendor\\Subtype-DCC\\Subtype-DCC\\results\\PAAD.dcc",
+      "n_samples_eval": 176,
+      "neg_log10_logrank_p": 0.2483201184783841,
+      "n_significant_clinical": 0,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 0.7966209847339057,
+        "gender": 0.3856608719589907,
+        "pathologic_stage": 0.5739647380448687,
+        "pathologic_T": 0.7860371299842084,
+        "pathologic_N": 0.4206126498081405,
+        "pathologic_M": 0.25666795446304896
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "PAAD",
+      "method": "snf",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\PAAD.snf.tsv",
+      "n_samples_eval": 176,
+      "neg_log10_logrank_p": 2.784655965551542,
+      "n_significant_clinical": 0,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 0.4808365763875072,
+        "gender": 0.09775192026745254,
+        "pathologic_stage": 0.210407760015577,
+        "pathologic_T": 0.060941672411735544,
+        "pathologic_N": 0.5885513652614085,
+        "pathologic_M": 0.4996866943512257
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "PAAD",
+      "method": "kmeans",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\PAAD.kmeans.tsv",
+      "n_samples_eval": 176,
+      "neg_log10_logrank_p": 0.7720693028538274,
+      "n_significant_clinical": 1,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 0.9225604686262384,
+        "gender": 0.01376294561323112,
+        "pathologic_stage": 0.49916816812364917,
+        "pathologic_T": 0.41948049031108714,
+        "pathologic_N": 0.33065591170899766,
+        "pathologic_M": 0.20679582655653236
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "PAAD",
+      "method": "spectral",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\PAAD.spectral.tsv",
+      "n_samples_eval": 176,
+      "neg_log10_logrank_p": 0.5028212623373046,
+      "n_significant_clinical": 0,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 0.4542249042121158,
+        "gender": 1.0,
+        "pathologic_stage": 0.9979581222899496,
+        "pathologic_T": 0.9932161364085753,
+        "pathologic_N": 0.9219939405169598,
+        "pathologic_M": 0.5393275527716908
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "PAAD",
+      "method": "nmf",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\PAAD.nmf.tsv",
+      "n_samples_eval": 176,
+      "neg_log10_logrank_p": 0.19824576137917319,
+      "n_significant_clinical": 1,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 0.6280573176762828,
+        "gender": 0.022834869662103928,
+        "pathologic_stage": 0.5955828893335193,
+        "pathologic_T": 0.28290012958618116,
+        "pathologic_N": 0.6912748449575778,
+        "pathologic_M": 0.17860917468628904
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "SKCM",
+      "method": "subtype_dcc",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\vendor\\Subtype-DCC\\Subtype-DCC\\results\\SKCM.dcc",
+      "n_samples_eval": 420,
+      "neg_log10_logrank_p": 2.5340080997835144,
+      "n_significant_clinical": 4,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 0.014365704496543827,
+        "gender": 0.9367777819825366,
+        "pathologic_stage": 0.001584843776812661,
+        "pathologic_T": 0.0012361057229473569,
+        "pathologic_N": 0.02265339842749978,
+        "pathologic_M": 0.675092853920052
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "SKCM",
+      "method": "snf",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\SKCM.snf.tsv",
+      "n_samples_eval": 420,
+      "neg_log10_logrank_p": 5.630566956443425,
+      "n_significant_clinical": 4,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 0.0036970285012431657,
+        "gender": 0.8210714878464723,
+        "pathologic_stage": 1.506454119853593e-05,
+        "pathologic_T": 5.421489373527778e-08,
+        "pathologic_N": 0.01421327779983972,
+        "pathologic_M": 0.5441222327242905
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "SKCM",
+      "method": "kmeans",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\SKCM.kmeans.tsv",
+      "n_samples_eval": 420,
+      "neg_log10_logrank_p": 4.448872798739772,
+      "n_significant_clinical": 4,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 0.030310042330160155,
+        "gender": 0.9367252490251059,
+        "pathologic_stage": 0.0016948095832543383,
+        "pathologic_T": 1.5684976405114287e-05,
+        "pathologic_N": 0.04335794675676908,
+        "pathologic_M": 0.9178306898917475
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "SKCM",
+      "method": "spectral",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\SKCM.spectral.tsv",
+      "n_samples_eval": 420,
+      "neg_log10_logrank_p": 0.24060188446321096,
+      "n_significant_clinical": 1,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 0.764262785041994,
+        "gender": 0.5388440729830735,
+        "pathologic_stage": 0.26456853909406136,
+        "pathologic_T": 0.00013605477546266712,
+        "pathologic_N": 0.9999992806256204,
+        "pathologic_M": 0.9999992854365322
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "SKCM",
+      "method": "nmf",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\SKCM.nmf.tsv",
+      "n_samples_eval": 420,
+      "neg_log10_logrank_p": 4.469627781150513,
+      "n_significant_clinical": 3,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 0.00015146245276599562,
+        "gender": 0.788019921294953,
+        "pathologic_stage": 0.0009809807325604385,
+        "pathologic_T": 0.009558033327951593,
+        "pathologic_N": 0.10074895862216524,
+        "pathologic_M": 0.18505095021895748
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "STAD",
+      "method": "subtype_dcc",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\vendor\\Subtype-DCC\\Subtype-DCC\\results\\STAD.dcc",
+      "n_samples_eval": 407,
+      "neg_log10_logrank_p": 1.830571337547929,
+      "n_significant_clinical": 2,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 0.0013361321359735162,
+        "gender": 0.25355832374793413,
+        "pathologic_stage": 0.451620873756461,
+        "pathologic_T": 0.1111141920497329,
+        "pathologic_N": 0.10159941309756919,
+        "pathologic_M": 0.0159703535493662
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "STAD",
+      "method": "snf",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\STAD.snf.tsv",
+      "n_samples_eval": 407,
+      "neg_log10_logrank_p": 0.662328685335207,
+      "n_significant_clinical": 2,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 2.358977792519546e-06,
+        "gender": 0.015182858396977314,
+        "pathologic_stage": 0.8468821991768609,
+        "pathologic_T": 0.25782284861283655,
+        "pathologic_N": 0.10458315900232434,
+        "pathologic_M": 0.6766946447075762
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "STAD",
+      "method": "kmeans",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\STAD.kmeans.tsv",
+      "n_samples_eval": 407,
+      "neg_log10_logrank_p": 0.9203191665134153,
+      "n_significant_clinical": 2,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 1.1531163115868023e-05,
+        "gender": 0.026242291391404993,
+        "pathologic_stage": 0.6775446732558287,
+        "pathologic_T": 0.16963006853695975,
+        "pathologic_N": 0.07679852253312626,
+        "pathologic_M": 0.08438092831157411
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "STAD",
+      "method": "spectral",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\STAD.spectral.tsv",
+      "n_samples_eval": 407,
+      "neg_log10_logrank_p": 0.22557035296605604,
+      "n_significant_clinical": 2,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 0.9695187111281073,
+        "gender": 0.3050070678310273,
+        "pathologic_stage": 0.9379999822906478,
+        "pathologic_T": 0.0009060013481648378,
+        "pathologic_N": 0.012097700390208884,
+        "pathologic_M": 0.9928174778451093
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "STAD",
+      "method": "nmf",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\STAD.nmf.tsv",
+      "n_samples_eval": 407,
+      "neg_log10_logrank_p": 0.594946115439611,
+      "n_significant_clinical": 2,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 0.0009927307558281631,
+        "gender": 0.022286827652556573,
+        "pathologic_stage": 0.6592509170561882,
+        "pathologic_T": 0.5603317661874883,
+        "pathologic_N": 0.4100109219665752,
+        "pathologic_M": 0.1525272611038364
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "UCEC",
+      "method": "subtype_dcc",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\vendor\\Subtype-DCC\\Subtype-DCC\\results\\UCEC.dcc",
+      "n_samples_eval": 510,
+      "neg_log10_logrank_p": 4.685584073148334,
+      "n_significant_clinical": 1,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 3.6058440547533742e-12,
+        "gender": 1.0,
+        "pathologic_stage": 1.0,
+        "pathologic_T": 1.0,
+        "pathologic_N": 1.0,
+        "pathologic_M": 1.0
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "UCEC",
+      "method": "snf",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\UCEC.snf.tsv",
+      "n_samples_eval": 510,
+      "neg_log10_logrank_p": 7.177803091473422,
+      "n_significant_clinical": 1,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 1.6988278749988622e-09,
+        "gender": 1.0,
+        "pathologic_stage": 1.0,
+        "pathologic_T": 1.0,
+        "pathologic_N": 1.0,
+        "pathologic_M": 1.0
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "UCEC",
+      "method": "kmeans",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\UCEC.kmeans.tsv",
+      "n_samples_eval": 510,
+      "neg_log10_logrank_p": 5.088414102153721,
+      "n_significant_clinical": 1,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 3.148190684864392e-09,
+        "gender": 1.0,
+        "pathologic_stage": 1.0,
+        "pathologic_T": 1.0,
+        "pathologic_N": 1.0,
+        "pathologic_M": 1.0
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "UCEC",
+      "method": "spectral",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\UCEC.spectral.tsv",
+      "n_samples_eval": 510,
+      "neg_log10_logrank_p": -0.0,
+      "n_significant_clinical": 0,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 0.22223375457919872,
+        "gender": 1.0,
+        "pathologic_stage": 1.0,
+        "pathologic_T": 1.0,
+        "pathologic_N": 1.0,
+        "pathologic_M": 1.0
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "UCEC",
+      "method": "nmf",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\UCEC.nmf.tsv",
+      "n_samples_eval": 510,
+      "neg_log10_logrank_p": 3.251772441119224,
+      "n_significant_clinical": 1,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 0.0010145352886534408,
+        "gender": 1.0,
+        "pathologic_stage": 1.0,
+        "pathologic_T": 1.0,
+        "pathologic_N": 1.0,
+        "pathologic_M": 1.0
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "UVM",
+      "method": "subtype_dcc",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\vendor\\Subtype-DCC\\Subtype-DCC\\results\\UVM.dcc",
+      "n_samples_eval": 80,
+      "neg_log10_logrank_p": 4.924036371383283,
+      "n_significant_clinical": 0,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 1.0,
+        "gender": 1.0,
+        "pathologic_stage": 1.0,
+        "pathologic_T": 1.0,
+        "pathologic_N": 1.0,
+        "pathologic_M": 1.0
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "UVM",
+      "method": "snf",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\UVM.snf.tsv",
+      "n_samples_eval": 80,
+      "neg_log10_logrank_p": 4.3024112297069195,
+      "n_significant_clinical": 0,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 1.0,
+        "gender": 1.0,
+        "pathologic_stage": 1.0,
+        "pathologic_T": 1.0,
+        "pathologic_N": 1.0,
+        "pathologic_M": 1.0
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "UVM",
+      "method": "kmeans",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\UVM.kmeans.tsv",
+      "n_samples_eval": 80,
+      "neg_log10_logrank_p": 4.231793060355615,
+      "n_significant_clinical": 0,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 1.0,
+        "gender": 1.0,
+        "pathologic_stage": 1.0,
+        "pathologic_T": 1.0,
+        "pathologic_N": 1.0,
+        "pathologic_M": 1.0
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "UVM",
+      "method": "spectral",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\UVM.spectral.tsv",
+      "n_samples_eval": 80,
+      "neg_log10_logrank_p": 0.2753665973807352,
+      "n_significant_clinical": 0,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 1.0,
+        "gender": 1.0,
+        "pathologic_stage": 1.0,
+        "pathologic_T": 1.0,
+        "pathologic_N": 1.0,
+        "pathologic_M": 1.0
+      },
+      "status": "ok"
+    },
+    {
+      "cancer": "UVM",
+      "method": "nmf",
+      "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\UVM.nmf.tsv",
+      "n_samples_eval": 80,
+      "neg_log10_logrank_p": 4.654536626779246,
+      "n_significant_clinical": 0,
+      "clinical_pvals": {
+        "age_at_initial_pathologic_diagnosis": 1.0,
+        "gender": 1.0,
+        "pathologic_stage": 1.0,
+        "pathologic_T": 1.0,
+        "pathologic_N": 1.0,
+        "pathologic_M": 1.0
+      },
+      "status": "ok"
+    }
+  ]
+}

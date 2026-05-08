@@ -1,0 +1,15 @@
+{
+  "cancer": "BLCA",
+  "n_samples_eval": 399,
+  "neg_log10_logrank_p": 1.9405485029353897,
+  "n_significant_clinical": 5,
+  "clinical_pvals": {
+    "age_at_initial_pathologic_diagnosis": 3.251399427595603e-05,
+    "gender": 0.17199485881274534,
+    "pathologic_stage": 9.025751696431043e-08,
+    "pathologic_T": 1.2755051759916818e-05,
+    "pathologic_N": 2.2605838217592673e-06,
+    "pathologic_M": 7.430979874867011e-08
+  },
+  "status": "ok"
+}

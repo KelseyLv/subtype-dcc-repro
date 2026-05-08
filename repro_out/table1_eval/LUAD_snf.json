@@ -1,0 +1,9 @@
+{
+  "cancer": "LUAD",
+  "method": "snf",
+  "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\LUAD.snf.tsv",
+  "n_samples_eval": 490,
+  "neg_log10_logrank_p": 2.3009132866553164,
+  "n_significant_clinical": 3,
+  "status": "ok"
+}

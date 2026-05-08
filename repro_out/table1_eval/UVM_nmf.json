@@ -1,0 +1,9 @@
+{
+  "cancer": "UVM",
+  "method": "nmf",
+  "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\UVM.nmf.tsv",
+  "n_samples_eval": 80,
+  "neg_log10_logrank_p": 4.654536626779246,
+  "n_significant_clinical": 0,
+  "status": "ok"
+}

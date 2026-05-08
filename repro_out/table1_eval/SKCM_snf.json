@@ -1,0 +1,9 @@
+{
+  "cancer": "SKCM",
+  "method": "snf",
+  "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\SKCM.snf.tsv",
+  "n_samples_eval": 420,
+  "neg_log10_logrank_p": 5.630566956443425,
+  "n_significant_clinical": 4,
+  "status": "ok"
+}

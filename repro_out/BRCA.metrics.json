@@ -1,0 +1,15 @@
+{
+  "cancer": "BRCA",
+  "n_samples_eval": 1031,
+  "neg_log10_logrank_p": 1.4727425940133676,
+  "n_significant_clinical": 5,
+  "clinical_pvals": {
+    "age_at_initial_pathologic_diagnosis": 3.3030872285306384e-07,
+    "gender": 0.00010909919364674073,
+    "pathologic_stage": 4.276360917437874e-06,
+    "pathologic_T": 0.0003879193174722489,
+    "pathologic_N": 7.875153361225242e-06,
+    "pathologic_M": 0.06681255411177242
+  },
+  "status": "ok"
+}

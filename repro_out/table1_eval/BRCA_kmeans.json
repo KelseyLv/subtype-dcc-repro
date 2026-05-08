@@ -1,0 +1,9 @@
+{
+  "cancer": "BRCA",
+  "method": "kmeans",
+  "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\BRCA.kmeans.tsv",
+  "n_samples_eval": 1031,
+  "neg_log10_logrank_p": 1.3536873580503221,
+  "n_significant_clinical": 5,
+  "status": "ok"
+}

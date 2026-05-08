@@ -1,0 +1,9 @@
+{
+  "cancer": "PAAD",
+  "method": "snf",
+  "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\PAAD.snf.tsv",
+  "n_samples_eval": 176,
+  "neg_log10_logrank_p": 2.784655965551542,
+  "n_significant_clinical": 0,
+  "status": "ok"
+}

@@ -1,0 +1,13 @@
+{
+  "n_samples_eval": 176,
+  "neg_log10_logrank_p": 2.784655965551542,
+  "n_significant_clinical": 0,
+  "clinical_pvals": {
+    "age_at_initial_pathologic_diagnosis": 0.4808365763875072,
+    "gender": 0.09775192026745254,
+    "pathologic_stage": 0.210407760015577,
+    "pathologic_T": 0.060941672411735544,
+    "pathologic_N": 0.5885513652614085,
+    "pathologic_M": 0.4996866943512257
+  }
+}

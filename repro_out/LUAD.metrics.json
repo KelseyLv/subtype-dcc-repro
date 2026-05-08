@@ -1,0 +1,15 @@
+{
+  "cancer": "LUAD",
+  "n_samples_eval": 490,
+  "neg_log10_logrank_p": 3.5141859700584033,
+  "n_significant_clinical": 5,
+  "clinical_pvals": {
+    "age_at_initial_pathologic_diagnosis": 0.009244768186572454,
+    "gender": 0.00012059672481751799,
+    "pathologic_stage": 0.0012663618802755004,
+    "pathologic_T": 0.00016732364413186813,
+    "pathologic_N": 0.01000220792616501,
+    "pathologic_M": 0.26521873346975366
+  },
+  "status": "ok"
+}

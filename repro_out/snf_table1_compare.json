@@ -1,0 +1,74 @@
+[
+  {
+    "cancer": "BRCA",
+    "paper_neg_log10_logrank_p": 0.93,
+    "paper_n_significant_clinical": 5,
+    "repro_neg_log10_logrank_p": 2.249457465152865,
+    "repro_n_significant_clinical": 6,
+    "n_samples_eval": 1031
+  },
+  {
+    "cancer": "BLCA",
+    "paper_neg_log10_logrank_p": 1.31,
+    "paper_n_significant_clinical": 6,
+    "repro_neg_log10_logrank_p": 0.6385127951556023,
+    "repro_n_significant_clinical": 5,
+    "n_samples_eval": 399
+  },
+  {
+    "cancer": "KIRC",
+    "paper_neg_log10_logrank_p": 8.19,
+    "paper_n_significant_clinical": 6,
+    "repro_neg_log10_logrank_p": 9.703142741701726,
+    "repro_n_significant_clinical": 6,
+    "n_samples_eval": 488
+  },
+  {
+    "cancer": "LUAD",
+    "paper_neg_log10_logrank_p": 2.23,
+    "paper_n_significant_clinical": 4,
+    "repro_neg_log10_logrank_p": 2.3009132866553164,
+    "repro_n_significant_clinical": 3,
+    "n_samples_eval": 490
+  },
+  {
+    "cancer": "PAAD",
+    "paper_neg_log10_logrank_p": 3.24,
+    "paper_n_significant_clinical": 3,
+    "repro_neg_log10_logrank_p": 2.784655965551542,
+    "repro_n_significant_clinical": 0,
+    "n_samples_eval": 176
+  },
+  {
+    "cancer": "SKCM",
+    "paper_neg_log10_logrank_p": 5.27,
+    "paper_n_significant_clinical": 4,
+    "repro_neg_log10_logrank_p": 5.630566956443425,
+    "repro_n_significant_clinical": 4,
+    "n_samples_eval": 420
+  },
+  {
+    "cancer": "STAD",
+    "paper_neg_log10_logrank_p": 0.72,
+    "paper_n_significant_clinical": 2,
+    "repro_neg_log10_logrank_p": 0.662328685335207,
+    "repro_n_significant_clinical": 2,
+    "n_samples_eval": 407
+  },
+  {
+    "cancer": "UCEC",
+    "paper_neg_log10_logrank_p": 5.0,
+    "paper_n_significant_clinical": 1,
+    "repro_neg_log10_logrank_p": 7.177803091473422,
+    "repro_n_significant_clinical": 1,
+    "n_samples_eval": 510
+  },
+  {
+    "cancer": "UVM",
+    "paper_neg_log10_logrank_p": 2.77,
+    "paper_n_significant_clinical": 0,
+    "repro_neg_log10_logrank_p": 4.3024112297069195,
+    "repro_n_significant_clinical": 0,
+    "n_samples_eval": 80
+  }
+]

@@ -2,7 +2,7 @@
 
 主文顺序：**§0 结论** → **§1–3**（背景、数据、预处理）→ **§4 超参** → **§5 训练与评测结果**（图、指标、汇报与替代方案）。其余命令、排障、代码修复等一律见 **附录**。
 
-泛化「新癌种」仍见 `docs/CUSTOM_DATASET_SUBTYPE_DCC.md`、`docs/TCGA_SUBTYPE_DCC_GENERIC.md`；预处理细节全文见 `docs/XENA_TO_FEA_PREPROCESSING.md`。
+泛化「新癌种」仍见 `docs/CUSTOM_DATASET_SUBTYPE_DCC.md`、`docs/TCGA_SUBTYPE_DCC_GENERIC.md`；预处理细节全文见 `docs/XENA_TO_FEA_PREPROCESSING.md`。**给队友的推荐阅读顺序**见 [`docs/EXTENSION_FOR_NEW_CANCER.md`](EXTENSION_FOR_NEW_CANCER.md)。
 
 ---
 

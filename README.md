@@ -23,6 +23,8 @@ pip install -r requirements.txt
 
 ## 2. Data
 
+This repository may already include **`data/clinical/cBioportal_data.tsv`** (team-shared GerkeLab extract, ~9 MB). If that file is present after `git clone`, you can **skip** the clinical download step in Option A and only run the Subtype-GAN junction / `fea` setup you still need.
+
 ### Option A — one PowerShell script (recommended)
 
 From the repo root, run:

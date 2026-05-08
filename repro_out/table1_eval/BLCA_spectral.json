@@ -1,0 +1,9 @@
+{
+  "cancer": "BLCA",
+  "method": "spectral",
+  "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\BLCA.spectral.tsv",
+  "n_samples_eval": 399,
+  "neg_log10_logrank_p": 0.7550218598327937,
+  "n_significant_clinical": 1,
+  "status": "ok"
+}

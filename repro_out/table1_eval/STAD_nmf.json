@@ -1,0 +1,9 @@
+{
+  "cancer": "STAD",
+  "method": "nmf",
+  "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\repro_out\\STAD.nmf.tsv",
+  "n_samples_eval": 407,
+  "neg_log10_logrank_p": 0.594946115439611,
+  "n_significant_clinical": 2,
+  "status": "ok"
+}

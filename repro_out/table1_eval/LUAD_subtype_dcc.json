@@ -1,0 +1,9 @@
+{
+  "cancer": "LUAD",
+  "method": "subtype_dcc",
+  "labels_path": "D:\\LateInUniversity\\Term10\\健康管理中的智能数据分析\\subtype-dcc-repro\\vendor\\Subtype-DCC\\Subtype-DCC\\results\\LUAD.dcc",
+  "n_samples_eval": 490,
+  "neg_log10_logrank_p": 3.5141859700584033,
+  "n_significant_clinical": 5,
+  "status": "ok"
+}
