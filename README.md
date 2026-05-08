@@ -1,15 +1,29 @@
 # Subtype-DCC paper reproduction kit
 
-This folder vendors a slightly patched [Subtype-DCC](https://github.com/zhaojingo/Subtype-DCC) training stack and adds **evaluation**, **sklearn baselines**, **plotting**, and **ablation** runners aligned with *Briefings in Bioinformatics* (2023), without modifying your attached plan file.
+Vendors a lightly patched [Subtype-DCC](https://github.com/zhaojingo/Subtype-DCC) training stack and adds **evaluation**, **sklearn baselines**, **SNF / Table 1 batching**, **plotting**, and **ablation** helpers aligned with *Briefings in Bioinformatics* (2023). This fork also carries **team-facing snapshots**: bundled clinical table, versioned **`repro_out/`**, and curated **`docs/*_artifacts/`** for GitHub-friendly links.
 
-## Layout
+## Repository layout
 
 | Path | Purpose |
 |------|---------|
 | [vendor/Subtype-DCC/Subtype-DCC/](vendor/Subtype-DCC/Subtype-DCC/) | Training code (`train.py`, `dataloader.py`, `modules/`, `config/`) |
-| [vendor/Subtype-DCC/subtype_file/fea/](vendor/Subtype-DCC/subtype_file/README.txt) | **You populate**: four `*.fea` matrices per cancer (see Subtype-GAN) |
-| [repro/](repro/) | Metrics, plots, sklearn baselines, batch helpers |
-| [benchmarks/](benchmarks/) | Notes + R templates for SNF / NEMO / PINS / iCluster / MCCA / LRACluster |
+| [vendor/Subtype-DCC/subtype_file/fea/](vendor/Subtype-DCC/subtype_file/README.txt) | **You link or generate**: four `*.fea` matrices per cancer (Subtype-GAN junction or `repro/xena_gz_to_subtype_dcc_fea.py`) |
+| [repro/](repro/) | Metrics, plots, sklearn baselines, batch Table 1, LIHC / manuscript helpers |
+| [repro_out/](repro_out/) | **Tracked in this fork**: metrics JSON, label TSVs, Table 1 outputs, manuscript caches/PNGs, logs |
+| [data/clinical/](data/clinical/) | **Tracked**: `cBioportal_data.tsv` (GerkeLab extract) for `repro/evaluate.py` |
+| [docs/lihc_artifacts/](docs/lihc_artifacts/) | Small LIHC snapshot (metrics + figures) for documentation |
+| [docs/table1_artifacts/](docs/table1_artifacts/) | Compact mirror of nine-cohort × five-method Table 1 artifacts |
+| [docs/EXTENSION_FOR_NEW_CANCER.md](docs/EXTENSION_FOR_NEW_CANCER.md) | **Onboarding** for teammates extending to new cancers |
+| [benchmarks/](benchmarks/) | R templates for SNF / NEMO / PINS / iCluster / MCCA / LRACluster |
+
+**Still not in Git (too large or machine-local):** `vendor/.../Subtype-DCC/save/` (checkpoints), `vendor/.../results/*.dcc` / `*.fea`, Xena `*.gz` under `fea/`. Train or place `.dcc` locally, then evaluate.
+
+## Quick start after `git clone`
+
+1. **Python env:** §1 below.  
+2. **Clinical:** use **`data/clinical/cBioportal_data.tsv`** in all `repro/evaluate.py` examples (already in the repo).  
+3. **Features (`*.fea`):** obtain via §2 (Subtype-GAN junction or your own preprocessing).  
+4. **New cancer extension:** read **[docs/EXTENSION_FOR_NEW_CANCER.md](docs/EXTENSION_FOR_NEW_CANCER.md)** then **[docs/LIHC_EXTENSION_SUBTYPE_DCC.md](docs/LIHC_EXTENSION_SUBTYPE_DCC.md)** as the end-to-end template.
 
 ## 1. Environment
 
@@ -18,55 +32,47 @@ cd subtype-dcc-repro
 python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
-# Install PyTorch with CUDA from https://pytorch.org if training on GPU
+# PyTorch with CUDA: https://pytorch.org if training on GPU
 ```
 
-## 2. Data
+## 2. Data (`fea` + clinical)
 
-This repository may already include **`data/clinical/cBioportal_data.tsv`** (team-shared GerkeLab extract, ~9 MB). If that file is present after `git clone`, you can **skip** the clinical download step in Option A and only run the Subtype-GAN junction / `fea` setup you still need.
+### Option A — PowerShell one-shot (Subtype-GAN + junction + clinical)
 
-### Option A — one PowerShell script (recommended)
-
-From the repo root, run:
+From the repo root:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File scripts\run_data_setup.ps1
 ```
 
-This will: **clone Subtype-GAN** into `external/Subtype-GAN`, create a **junction**  
-`vendor/Subtype-DCC/subtype_file/fea` → `external/Subtype-GAN/fea`, and **download**  
-GerkeLab `data/clinical/cBioportal_data.tsv` (~9 MB) for use with `repro/evaluate.py`  
-(alternative to legacy `clinical_PANCAN_patient_with_followup.tsv`).  
-A transcript is written to `data_setup_transcript.log`.
+This **clones Subtype-GAN** into `external/Subtype-GAN`, creates a **junction**  
+`vendor/Subtype-DCC/subtype_file/fea` → `external/Subtype-GAN/fea`, and runs **`scripts/download_clinical.py`** so `data/clinical/cBioportal_data.tsv` exists (or is refreshed from the same GerkeLab source as the committed file). A transcript is written to `data_setup_transcript.log`.
 
-Clone URLs: **defaults try GitHub first**, then `gitclone.com` mirror (mirrors often return **502**; if both fail, use VPN or download the repo ZIP manually into `external/Subtype-GAN`). Optional flags:
-
-```powershell
-# Prefer mirror first
-powershell -ExecutionPolicy Bypass -File scripts\run_data_setup.ps1 -MirrorFirst
-
-# Single URL only
-powershell -ExecutionPolicy Bypass -File scripts\run_data_setup.ps1 -CloneUrl https://github.com/haiyang1986/Subtype-GAN.git
-```
-
-If you **manually downloaded** GitHub ZIP (`Subtype-GAN-master`), create the junction only:
+If **`fea\` is already present** under `external/Subtype-GAN`, the script skips cloning. If you **only** need the junction (e.g. you already cloned Subtype-GAN manually):
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File scripts\link_fea_junction.ps1
 ```
 
+Clone URLs default to **GitHub**, then `gitclone.com` (mirrors often **502**). Optional flags:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\run_data_setup.ps1 -MirrorFirst
+powershell -ExecutionPolicy Bypass -File scripts\run_data_setup.ps1 -CloneUrl https://github.com/haiyang1986/Subtype-GAN.git
+```
+
 ### Option B — manual
 
-1. Clone `https://github.com/haiyang1986/Subtype-GAN` (large `fea/` matrices).
+1. Clone `https://github.com/haiyang1986/Subtype-GAN` (large `fea/` matrices).  
 2. Link `vendor/Subtype-DCC/subtype_file/fea` → `Subtype-GAN/fea`:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File scripts\setup_windows.ps1 -SubtypeGanFeaPath "D:\path\to\Subtype-GAN\fea"
 ```
 
-3. Clinical table: either **`clinical_PANCAN_patient_with_followup.tsv`** (legacy PANCAN; Subtype-GAN default) or run  
+3. Clinical: either rely on **`data/clinical/cBioportal_data.tsv`** from this repo or regenerate with  
    `python scripts/download_clinical.py --source gerke --out data/clinical/cBioportal_data.tsv`.  
-   Pass the path with `--clinical` below.
+   Pass **`--clinical data/clinical/cBioportal_data.tsv`** (or your PANCAN path) to `repro/evaluate.py`.
 
 ## 3. Train Subtype-DCC (nine cancers)
 
@@ -76,34 +82,36 @@ python repro/run_subtype_dcc_batch.py --extra-args "--epochs 600"
 # python repro/run_subtype_dcc_batch.py --extra-args "--epochs 2" --cancers BRCA
 ```
 
-Checkpoints and outputs land in `vendor/Subtype-DCC/Subtype-DCC/save/` and `vendor/Subtype-DCC/Subtype-DCC/results/` (`*.dcc`, `*.fea`).
+Checkpoints and training outputs go to `vendor/Subtype-DCC/Subtype-DCC/save/` and `vendor/Subtype-DCC/Subtype-DCC/results/` (`*.dcc`, training-time `*.fea` where applicable). Those paths remain **gitignored**.
 
 ## 4. Paper metrics (log-rank −log10 p, six clinical tests)
 
 ```bash
-python repro/evaluate.py --labels vendor/Subtype-DCC/Subtype-DCC/results/BRCA.dcc --clinical PATH\clinical_PANCAN_patient_with_followup.tsv --cancer BRCA --out-json repro_out\BRCA.metrics.json
+python repro/evaluate.py --labels vendor/Subtype-DCC/Subtype-DCC/results/BRCA.dcc --clinical data/clinical/cBioportal_data.tsv --cancer BRCA --out-json repro_out/BRCA.metrics.json
 ```
 
-**Batch all five label sources × nine cancers** (Subtype-DCC `.dcc`, `repro_out/*.snf.tsv`, kmeans/spectral/nmf TSV), then compare to bundled paper Table 1 (SNF row filled; add Subtype-DCC / sklearn rows from the PDF into `data/paper_table1_reference.json` if you want full Δ columns):
+**Batch all five label sources × nine cancers** (Subtype-DCC `.dcc`, `repro_out/*.snf.tsv`, kmeans/spectral/nmf TSV), then compare to bundled paper Table 1 (SNF row filled; extend `data/paper_table1_reference.json` from the PDF if you want full Δ columns):
 
 ```bash
 .venv/Scripts/python.exe repro/batch_evaluate_table1_methods.py
 .venv/Scripts/python.exe repro/table1_compare_to_paper.py
 ```
 
-Outputs: `repro_out/table1_reproduction_metrics.json`, `repro_out/table1_reproduction_vs_paper.{json,md}`, per-method slims under `repro_out/table1_eval/`.
+Outputs: `repro_out/table1_reproduction_metrics.json`, `repro_out/table1_reproduction_vs_paper.{json,md}`, slims under `repro_out/table1_eval/`.
 
-### Git-friendly snapshot (`docs/table1_artifacts/`)
+### `docs/table1_artifacts/` mirror (optional)
 
-In this repository, **`repro_out/` may be tracked in full** for team sharing. You can still maintain **`docs/table1_artifacts/`** as a compact mirror (same Table 1 JSON/TSV/PNGs) for stable documentation links. After you finish the five methods × nine cancers pipeline (batch evaluate, `table1_compare_to_paper.py`, and optional Figure 1 plots), refresh that mirror with:
+`scripts/sync_table1_artifacts_to_docs.ps1` copies a **curated** Table 1 subset into **`docs/table1_artifacts/`** (metrics, `table1_eval` JSON, Figure 1 PNGs, `label_tsv/`, `batch_metrics_summary.json`) so documentation can link to stable paths under `docs/`.
+
+**Not copied into that mirror** (by design): training checkpoints, `.dcc`, `.fea`, Xena `.gz`, and large `repro_out/*_manuscript_cache` trees—those stay under `repro_out/` in this fork when present, or only on your machine in a slimmer checkout.
+
+Refresh the mirror after re-running the batch + compare + Figure 1 plots:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File scripts\sync_table1_artifacts_to_docs.ps1
 ```
 
-That script fills **`docs/table1_artifacts/`** with: `table1_reproduction_metrics.json`, `table1_reproduction_vs_paper.{json,md}`, `table1_eval/*.json`, `figure1_*.png`, **`label_tsv/`** (nine cohorts × SNF + kmeans + spectral + nmf), and **`batch_metrics_summary.json`** (Subtype-DCC `.dcc` batch from `batch_evaluate.py`). **Training checkpoints (`save/`), `vendor/.../results/*.dcc`, `*.fea`, Xena `.gz`, full clinical TSV, and large manuscript cache trees are not copied** — others still train or place `.dcc` locally, then re-run `batch_evaluate_table1_methods.py` if they need to refresh numbers.
-
-Regenerate Figure 1 from the committed summary JSON:
+Regenerate Figure 1 from a metrics JSON:
 
 ```bash
 .venv/Scripts/python.exe repro/plot_figure1_table1_boxplots.py --metrics-json docs/table1_artifacts/table1_reproduction_metrics.json --out-dir docs/table1_artifacts
@@ -111,9 +119,9 @@ Regenerate Figure 1 from the committed summary JSON:
 
 ## 5. Sklearn baselines (K-means, spectral, NMF)
 
-Uses the **same MinMax-scaled concatenated matrix** as Subtype-DCC (`repro/data_io.py`).
+Same MinMax-scaled concatenated matrix as Subtype-DCC (`repro/data_io.py`).
 
-**Nine cohorts × three methods (PowerShell, from repo root):** `scripts/run_sklearn_baselines_batch.ps1` (uses `.\.venv\Scripts\python.exe` and Table 1 `K` per cancer). Optional `-Evaluate` appends `repro/evaluate.py` per run; `-DryRun` prints commands only.
+**Nine cohorts × three methods (PowerShell, repo root):** `scripts/run_sklearn_baselines_batch.ps1` (Table 1 `K` per cancer). `-Evaluate` runs `repro/evaluate.py` per TSV; `-DryRun` prints commands only.
 
 ```bash
 python repro/baselines_sklearn.py -c BRCA --method kmeans --k 5 --out repro_out/BRCA.kmeans.tsv
@@ -125,10 +133,12 @@ Evaluate each TSV with `repro/evaluate.py` (`cluster` column).
 
 ## 6. Figures
 
+`figures/` is gitignored; write PNGs there or under `repro_out/`.
+
 ```bash
-python repro/plot_survival.py --labels vendor/Subtype-DCC/Subtype-DCC/results/KIRC.dcc --clinical PATH\clinical.tsv --cancer KIRC --out figures/KIRC_survival.png
+python repro/plot_survival.py --labels vendor/Subtype-DCC/Subtype-DCC/results/KIRC.dcc --clinical data/clinical/cBioportal_data.tsv --cancer KIRC --out figures/KIRC_survival.png
 python repro/plot_tsne.py --fea vendor/Subtype-DCC/Subtype-DCC/results/KIRC.fea --labels vendor/Subtype-DCC/Subtype-DCC/results/KIRC.dcc --out figures/KIRC_tsne.png
-python repro/run_benchmark_eval.py --clinical PATH\clinical.tsv --cancer BRCA --labels SubtypeDCC=vendor/Subtype-DCC/Subtype-DCC/results/BRCA.dcc KMeans=repro_out/BRCA.kmeans.tsv --out repro_out/BRCA.summary.json
+python repro/run_benchmark_eval.py --clinical data/clinical/cBioportal_data.tsv --cancer BRCA --labels SubtypeDCC=vendor/Subtype-DCC/Subtype-DCC/results/BRCA.dcc KMeans=repro_out/BRCA.kmeans.tsv --out repro_out/BRCA.summary.json
 python repro/plot_benchmark_bars.py --summary-json repro_out/BRCA.summary.json --out-prefix figures/BRCA_bench
 ```
 
@@ -136,17 +146,16 @@ python repro/plot_benchmark_bars.py --summary-json repro_out/BRCA.summary.json -
 
 ```bash
 python repro/run_ablation.py -c KIRC --drop rna
-# Or run all four single-omic removals:
 python repro/run_ablation.py -c KIRC
 ```
 
 ## 8. Other baselines (Subtype-GAN, SNF, NEMO, …)
 
-See [benchmarks/README.md](benchmarks/README.md). Subtype-GAN uses a legacy TensorFlow 1 environment—keep it separate from this PyTorch env.
+See [benchmarks/README.md](benchmarks/README.md). Subtype-GAN expects a legacy TensorFlow 1 stack—keep it separate from this PyTorch env.
 
 ## Notes on patches vs upstream
 
-- `matplotlib` uses **Agg** backend; loss curves save without blocking on `plt.show()`.
-- `Encoder` **input dimension is inferred** from data so ablations change width correctly.
+- `matplotlib` uses **Agg**; loss curves save without blocking on `plt.show()`.
+- `Encoder` **input dimension is inferred** from data so ablations resize correctly.
 - `dataloader.py` supports `--exclude_omics` for ablation.
 - Training saves `checkpoint_{epochs}.tar` each epoch (upstream behaviour).
