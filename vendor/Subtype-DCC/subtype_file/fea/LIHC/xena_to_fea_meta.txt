@@ -1,0 +1,4 @@
+cancer=LIHC
+n_samples=357
+rna_rows=3500 mirna_rows=450 meth_rows=3139 cn_rows=3500
+caps: rna_max=3500 mirna_max=450 meth_max=3139 cn_max=3500

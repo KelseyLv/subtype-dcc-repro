@@ -1,0 +1,25 @@
+__pycache__/
+*.pyc
+.env
+.venv/
+venv/
+*.tar
+*.h5
+_subtype_file/
+external/
+results/
+logs/
+*.dcc.tmp
+repro_out/
+figures/
+vendor/Subtype-DCC/Subtype-DCC/log/
+vendor/Subtype-DCC/Subtype-DCC/save/
+.env/
+
+# Large local/regenerated omics matrices (see docs/XENA_TO_FEA_PREPROCESSING.md)
+vendor/Subtype-DCC/subtype_file/fea/**/*.fea
+vendor/Subtype-DCC/subtype_file/fea/**/*.gz
+
+# Full cBioPortal clinical extract (obtain separately; not versioned)
+data/clinical/*.tsv
+data_setup_transcript.log

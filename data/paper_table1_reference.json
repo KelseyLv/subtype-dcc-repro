@@ -1,0 +1,59 @@
+{
+  "citation": "Zhao J et al., Briefings in Bioinformatics 2023, bbad025, doi:10.1093/bib/bbad025. Table 1 reports −log10(log-rank P) and number of significant clinical variables (of six).",
+  "note": "The SNF row below matches the manuscript values used in docs/SESSION_HANDOFF.md §七. For Subtype-DCC (proposed method) and K-means / Spectral / NMF baseline rows, transcribe the corresponding cells from your copy of Table 1 into the empty objects (same per-cancer format as snf: [neg_log10_logrank_p, n_significant_clinical]). Until filled, table1_compare_to_paper.py will list reproduction metrics and mark paper cells as unavailable.",
+  "snf": {
+    "BRCA": [0.93, 5],
+    "BLCA": [1.31, 6],
+    "KIRC": [8.19, 6],
+    "LUAD": [2.23, 4],
+    "PAAD": [3.24, 3],
+    "SKCM": [5.27, 4],
+    "STAD": [0.72, 2],
+    "UCEC": [5.0, 1],
+    "UVM": [2.77, 0]
+  },
+  "subtype_dcc": {
+    "BRCA": [1.11, 5],
+    "BLCA": [2.33, 6],
+    "KIRC": [8.79, 6],
+    "LUAD": [1.69, 4],
+    "PAAD": [3.75, 1],
+    "SKCM": [5.94, 4],
+    "STAD": [1.48, 2],
+    "UCEC": [5.46, 1],
+    "UVM": [2.77, 0]
+  },
+  "kmeans": {
+    "BRCA": [0.12, 5],
+    "BLCA": [0.66, 3],
+    "KIRC": [4.77, 6],
+    "LUAD": [1.01, 1],
+    "PAAD": [2.38, 0],
+    "SKCM": [1.56, 1],
+    "STAD": [0.01, 3],
+    "UCEC": [7.03, 1],
+    "UVM": [1.67, 0]
+  },
+  "spectral": {
+    "BRCA": [0.08, 4],
+    "BLCA": [1.67, 3],
+    "KIRC": [5.46, 6],
+    "LUAD": [0.60, 1],
+    "PAAD": [2.39, 0],
+    "SKCM": [1.77, 2],
+    "STAD": [0.19, 2],
+    "UCEC": [0.81, 1],
+    "UVM": [1.82, 0]
+  },
+  "nmf": {
+    "BRCA": [0.40, 4],
+    "BLCA": [0.24, 1],
+    "KIRC": [5.63, 5],
+    "LUAD": [0.42, 1],
+    "PAAD": [1.49, 0],
+    "SKCM": [3.54, 3],
+    "STAD": [0.10, 1],
+    "UCEC": [5.10, 1],
+    "UVM": [1.39, 0]
+  }
+}
