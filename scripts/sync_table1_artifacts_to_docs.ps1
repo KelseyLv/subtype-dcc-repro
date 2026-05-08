@@ -3,7 +3,7 @@
   Copy nine-cohort × five-method Table 1 reproduction outputs from repro_out/ into docs/table1_artifacts/ for git.
 
 .DESCRIPTION
-  repro_out/ is gitignored. This script mirrors only small, reviewable artifacts:
+  Reads from repro_out/ (this fork may version repro_out/ in full; the script still copies a curated Table 1 subset into docs/ for stable links). Mirrors only small, reviewable artifacts:
   - table1_reproduction_metrics.json, table1_reproduction_vs_paper.{json,md}
   - repro_out/table1_eval/*.json
   - figure1_* boxplot PNGs

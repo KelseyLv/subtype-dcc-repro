@@ -95,7 +95,7 @@ Outputs: `repro_out/table1_reproduction_metrics.json`, `repro_out/table1_reprodu
 
 ### Git-friendly snapshot (`docs/table1_artifacts/`)
 
-`repro_out/` is **gitignored**. After you finish the five methods × nine cancers pipeline (batch evaluate, `table1_compare_to_paper.py`, and optional Figure 1 plots), copy **only small, reviewable artifacts** into the repo with:
+In this repository, **`repro_out/` may be tracked in full** for team sharing. You can still maintain **`docs/table1_artifacts/`** as a compact mirror (same Table 1 JSON/TSV/PNGs) for stable documentation links. After you finish the five methods × nine cancers pipeline (batch evaluate, `table1_compare_to_paper.py`, and optional Figure 1 plots), refresh that mirror with:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File scripts\sync_table1_artifacts_to_docs.ps1
