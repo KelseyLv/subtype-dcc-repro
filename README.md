@@ -16,21 +16,27 @@ Vendors a lightly patched [Subtype-DCC](https://github.com/zhaojingo/Subtype-DCC
 | [docs/EXTENSION_FOR_NEW_CANCER.md](docs/EXTENSION_FOR_NEW_CANCER.md) | **Onboarding** for teammates extending to new cancers |
 | [benchmarks/](benchmarks/) | R templates for SNF / NEMO / PINS / iCluster / MCCA / LRACluster |
 
-**Still not in Git (too large or machine-local):** `vendor/.../Subtype-DCC/save/` (checkpoints), `vendor/.../results/*.dcc` / `*.fea`, Xena `*.gz` under `fea/`. Train or place `.dcc` locally, then evaluate.
+**Not in Git (by design):** **`.venv/`** — the virtual environment is **never** committed (see `.gitignore`); after `git clone` everyone creates their own at the repo root (§1). Also omitted: `vendor/.../Subtype-DCC/save/` (checkpoints), `vendor/.../results/*.dcc` / `*.fea`, Xena `*.gz` under `fea/`. Train or place `.dcc` locally, then evaluate.
 
 ## Quick start after `git clone`
 
-1. **Python env:** §1 below.  
+1. **Python env (local only):** create **`.venv/`** per §1 — it is not cloned from Git.  
 2. **Clinical:** use **`data/clinical/cBioportal_data.tsv`** in all `repro/evaluate.py` examples (already in the repo).  
 3. **Features (`*.fea`):** obtain via §2 (Subtype-GAN junction or your own preprocessing).  
 4. **New cancer extension:** read **[docs/EXTENSION_FOR_NEW_CANCER.md](docs/EXTENSION_FOR_NEW_CANCER.md)** then **[docs/LIHC_EXTENSION_SUBTYPE_DCC.md](docs/LIHC_EXTENSION_SUBTYPE_DCC.md)** as the end-to-end template.
 
 ## 1. Environment
 
+The repository only ships **`requirements.txt`**. The **`.venv/`** directory is **not** in Git (see `.gitignore`); after `git clone`, create it once at the repo root with the commands below. References to **`.venv\Scripts\python.exe`** (Windows) assume that local venv exists; with **conda** or a **global** Python, use **`python`** instead and ensure the same packages are installed (`pip install -r requirements.txt`).
+
 ```bash
 cd subtype-dcc-repro
 python -m venv .venv
+# Windows CMD / PowerShell:
 .venv\Scripts\activate
+# macOS / Linux:
+# source .venv/bin/activate
+
 pip install -r requirements.txt
 # PyTorch with CUDA: https://pytorch.org if training on GPU
 ```
